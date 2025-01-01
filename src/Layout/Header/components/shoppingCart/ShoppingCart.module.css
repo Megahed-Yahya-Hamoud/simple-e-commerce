@@ -1,0 +1,28 @@
+.favoriteLink {
+    transition: 0.1s ease-in-out;
+    color: #0087FF;
+    position: relative;
+  }
+
+  .favoriteLink:hover {
+    transform: scale(1.1) !important;
+  }
+  
+  .numberOfProducts{
+    background-color: rgba(255, 85, 85, 0.988);
+    border-radius: 100px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    padding: auto;
+    color: aliceblue;
+  }

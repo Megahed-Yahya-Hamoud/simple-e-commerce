@@ -1,0 +1,33 @@
+.lineOne {
+    height: 1px;
+    width: 400px;
+    border-radius: 50px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgb(255, 255, 255) 50%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .lineTwo {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 1px;
+    width: 800px;
+    border-radius: 50px;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgb(0, 0, 0) 50%,
+      rgba(255, 255, 255, 0)
+    );
+
+    @media (max-width:951px) {
+        width: 500px;
+    }
+
+    @media (max-width:551px) {
+        width: 70%;
+    }
+  }

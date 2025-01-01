@@ -1,0 +1,45 @@
+.containerHeader {
+  z-index: 1000;
+  padding: 3px 80px 15px 100px;
+  /* height: 50px; */
+  /* position: sticky;
+  top: 0px;
+  background-color: white; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @media (max-width: 1280px) {
+    padding: 3px 50px 15px 70px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 3px 20px 15px 30px;
+  }
+
+  @media (max-width: 501px) {
+    padding: 3px 20px 15px 10px;
+  }
+
+  @media (max-width: 451px) {
+    padding: 3px 15px 15px 10px;
+  }
+}
+
+.parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  align-items: normal;
+  gap: 2rem;
+
+  @media (max-width: 601px) {
+    gap: 1.5rem;
+  }
+  @media (max-width: 451px) {
+    gap: 1rem;
+  }
+}
+

@@ -1,0 +1,178 @@
+/* =========================================  products ================================== */
+
+.containerProducts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  @media (max-width: 901px) {
+    gap: 5px;
+  }
+}
+
+.productCard {
+  display: flex;
+  @media (max-width: 1250px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.title {
+  padding-left: 3px;
+  padding-top: 10px;
+  font-weight: 500 !important;
+  color: rgb(39, 39, 39);
+  width: 200px;
+  font-size: 14px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.containerImage {
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  overflow: hidden;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.productImage {
+  height: 100px;
+  width: 100px;
+  transition: 0.2s ease-in-out;
+}
+
+.containerImage:hover {
+  .productImage {
+    transform: scale(1.08);
+  }
+}
+
+.containerPrice {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.discountBox {
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  color: aliceblue;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 2px;
+  padding-bottom: 1px;
+}
+
+.off {
+  @media (max-width: 1250px) {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+/* =========================================  modal ================================== */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  @media (max-width: 1250px) {
+    flex-wrap: wrap;
+    padding: 0px 100px !important;
+  }
+
+  @media (max-width: 750px) {
+    flex-wrap: wrap;
+    padding: 0px 20px !important;
+
+    .btaAddCart {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    flex-wrap: wrap;
+    padding: 0px 0px !important;
+  }
+}
+
+.boxImageModal {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    height: auto;
+  }
+}
+
+.imageModal {
+  height: 350px;
+  width: fit-content !important;
+
+  @media (max-width: 650px) {
+    overflow: initial;
+    width: 300px !important;
+    height: 300px;
+  }
+
+  @media (max-width: 550px) {
+    width: 250px !important;
+    height: 250px;
+  }
+
+  @media (max-width: 450px) {
+    width: 200px !important;
+    height: 200px;
+  }
+
+  @media (max-width: 370px) {
+    width: 150px !important;
+    height: 150px;
+  }
+}
+
+.boxContentModal {
+  width: 100%;
+  @media (max-width: 1250px) {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+.productTitleModal {
+  font-weight: 600 !important;
+  font-size: 20px;
+  margin-bottom: 10px !important;
+}
+
+.descriptionModal {
+  overflow-y: auto;
+  height: 100px;
+  width: 530px;
+  font-size: 15px !important;
+  @media (max-width: 1250px) {
+    width: auto;
+  }
+}
+
+.discountINModal {
+  @media (max-width: 450px) {
+    font-size: 25px !important;
+  }
+}

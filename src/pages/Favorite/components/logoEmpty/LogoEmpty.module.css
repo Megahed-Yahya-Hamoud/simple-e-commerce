@@ -1,0 +1,49 @@
+
+.btnShopping {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 0.5rem;
+    /* width: fit-content; */
+    border-radius: 5px;
+    padding: 4px 10px 5px;
+    height: fit-content;
+    background-color: rgba(30, 41, 59, 0.812);
+    color: rgb(255, 255, 255) !important;
+    transition: 0.1s ease-in-out;
+    .arrow {
+      transition: 0.1s ease-in-out;
+    }
+    &:hover {
+      gap: 0.3rem;
+    background-color: rgb(30, 41, 59);
+      .arrow {
+        height: 25px !important;
+        width: 23px !important;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .TextBtn {
+        font-size: 15px;
+      }
+      .arrow {
+        height: 18px !important;
+        width: 18px !important;
+      }
+      &:hover {
+        .arrow {
+          height: 23px !important;
+          width: 23px !important;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .TextBtn {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+  
