@@ -97,8 +97,9 @@ export default function ProductsCart() {
         checked={checked}
         onChange={(event) => {
           check(id, checked);
-          // setPriceTotal(total)
           setChecked(event.currentTarget.checked);
+        }}
+        onClick={()=>{console.log("error");
         }}
       />
     );
@@ -207,7 +208,7 @@ export default function ProductsCart() {
           display={"flex"}
           style={{ justifyContent: "start" }}
         >
-          <Link onClick={handleProceedToPay()} className={classes.payBtn}>
+          <Link onClick={()=>{handleProceedToPay()}} className={classes.payBtn}>
             Proceed to Pay
           </Link>
         </Box>
