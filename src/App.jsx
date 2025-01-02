@@ -10,6 +10,7 @@ import Payment from "./pages/Payment/Payment";
 const LazyLoading = React.lazy(() => import("./pages/Home/HomePage"));
 
 function App() {
+
   return (
     <Box>
       <Header />

@@ -8,7 +8,7 @@ import {
   IconRefresh,
   IconTrash,
 } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { notifications } from "@mantine/notifications";
 // import { Container } from "postcss";
@@ -134,7 +134,16 @@ export default function ProductsCart() {
 
   localStorage.setItem("total", JSON.stringify(total));
 
-  
+  const navigate = useNavigate();
+
+  const handleProceedToPay = () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length) {
+      navigate("/payment");
+    } else {
+      navigate("/");
+    }
+  };
 
   return (
     <Box mt={50} mb={20} className={classes.parent}>
@@ -198,14 +207,7 @@ export default function ProductsCart() {
           display={"flex"}
           style={{ justifyContent: "start" }}
         >
-          <Link
-            to={
-              (JSON.parse(localStorage.getItem("cart")) || []).length
-                ? "/payment"
-                : "/"
-            }
-            className={classes.payBtn}
-          >
+          <Link onClick={handleProceedToPay()} className={classes.payBtn}>
             Proceed to Pay
           </Link>
         </Box>
