@@ -22,21 +22,19 @@ export default function ProductsCart() {
     const updatedCart = storedCart.filter((ele) => ele.id != id);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
 
-    const foundIt=storedCart.find((ele) => ele.id == id)
+    const foundIt = storedCart.find((ele) => ele.id == id);
 
     if (foundIt) {
       notifications.show({
-              message: "Deleted",
-              color: "blue",
-            });
-    }else{
+        message: "Deleted",
+        color: "blue",
+      });
+    } else {
       notifications.show({
         message: "This item deleted",
         color: "blue",
       });
     }
-    
-
   }
 
   function counterHandler(id) {
@@ -136,37 +134,7 @@ export default function ProductsCart() {
 
   localStorage.setItem("total", JSON.stringify(total));
 
-  const [path , setPath]=useState("")
-  function checkIsEmpty() {
-    
-  const checkPro = JSON.parse(localStorage.getItem("cart")) || [];
-
-  if (checkPro.length <= 0) {
-    setPath("/")
-    // location.href='/'
-    console.log("no");
-  }else{
-    setPath("/payment")
-    console.log("yes");
-    // location.href='/payment'
-    console.log(window.location.pathname);
-    if (path == '/payment') {
-      notifications.show({
-        message: "Thanks",
-        color: "green",
-      });
-    }else{
-      notifications.show({
-        message: "Please click again",
-        color: "blue",
-      });
-    }
-    
-
-    
-  }
-  }
-
+  
 
   return (
     <Box mt={50} mb={20} className={classes.parent}>
@@ -230,8 +198,15 @@ export default function ProductsCart() {
           display={"flex"}
           style={{ justifyContent: "start" }}
         >
-          <Link to={path} onClick={()=>{checkIsEmpty()}} className={classes.payBtn}>
-            procced to pay
+          <Link
+            to={
+              (JSON.parse(localStorage.getItem("cart")) || []).length
+                ? "/payment"
+                : "/"
+            }
+            className={classes.payBtn}
+          >
+            Proceed to Pay
           </Link>
         </Box>
       </Box>
