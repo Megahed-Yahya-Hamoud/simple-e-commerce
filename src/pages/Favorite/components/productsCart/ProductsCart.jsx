@@ -33,7 +33,6 @@ export default function ProductsCart() {
       notifications.show({
         message: "This item deleted",
         color: "blue",
-        
       });
     }
     
@@ -150,6 +149,11 @@ export default function ProductsCart() {
     setPath("/payment")
     console.log("yes");
     // location.href='/payment'
+    notifications.show({
+      message: "Please click again",
+      color: "blue",
+      
+    });
   }
   }
 
