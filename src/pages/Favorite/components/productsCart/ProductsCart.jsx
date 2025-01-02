@@ -149,11 +149,21 @@ export default function ProductsCart() {
     setPath("/payment")
     console.log("yes");
     // location.href='/payment'
-    notifications.show({
-      message: "Please click again",
-      color: "blue",
-      
-    });
+    console.log(window.location.pathname);
+    if (path == '/payment') {
+      notifications.show({
+        message: "Thanks",
+        color: "green",
+      });
+    }else{
+      notifications.show({
+        message: "Please click again",
+        color: "blue",
+      });
+    }
+    
+
+    
   }
   }
 
