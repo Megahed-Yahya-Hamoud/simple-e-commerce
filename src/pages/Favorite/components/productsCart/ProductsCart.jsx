@@ -137,15 +137,19 @@ export default function ProductsCart() {
 
   localStorage.setItem("total", JSON.stringify(total));
 
+  const [path , setPath]=useState("")
   function checkIsEmpty() {
+    
   const checkPro = JSON.parse(localStorage.getItem("cart")) || [];
 
   if (checkPro.length <= 0) {
-    location.href='/'
+    setPath("/")
+    // location.href='/'
     console.log("no");
   }else{
+    setPath("/payment")
     console.log("yes");
-    location.href='/payment'
+    // location.href='/payment'
   }
   }
 
@@ -212,7 +216,7 @@ export default function ProductsCart() {
           display={"flex"}
           style={{ justifyContent: "start" }}
         >
-          <Link onClick={()=>{checkIsEmpty()}} className={classes.payBtn}>
+          <Link to={path} onClick={()=>{checkIsEmpty()}} className={classes.payBtn}>
             procced to pay
           </Link>
         </Box>
