@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Box, Checkbox, Image, Text } from "@mantine/core";
+import { Box, Button, Checkbox, Image, Text } from "@mantine/core";
 import classes from "./ProductsCart.module.css";
 import { useCounter } from "@mantine/hooks";
 import {
@@ -143,6 +143,10 @@ export default function ProductsCart() {
       navigate("/payment");
     } else {
       navigate("/");
+      notifications.show({
+        message: "Your cart is empty",
+        color: "blue",
+      });
     }
   };
 
@@ -208,9 +212,9 @@ export default function ProductsCart() {
           display={"flex"}
           style={{ justifyContent: "start" }}
         >
-          <Link onClick={()=>{handleProceedToPay()}} className={classes.payBtn}>
+          <Button onClick={handleProceedToPay} className={classes.payBtn}>
             Proceed to Pay
-          </Link>
+          </Button>
         </Box>
       </Box>
     </Box>
